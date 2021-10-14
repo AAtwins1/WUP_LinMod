@@ -1,7 +1,7 @@
 ---
 title: "linear model from Web"
-author: "Your Name"
-date: "Put semester and year"
+author: "Adriana Pimentel"
+date: "Fall 2021"
 output:
    html_document:
          toc: true
@@ -21,7 +21,6 @@ Read about the data from the website where it is staged.  Then form three regres
 ```{r include=FALSE}
 require(tidyverse)
 require(tigerstats)
-require(rgl)
 require(knitr)
 
 ```
@@ -34,8 +33,16 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ## Model 1 SIM~ARMS
 
 ### scatterplot
+```{r}
+plot(SIMS~ARM,data=data)
+```
+  
+The plot shows a positive linear correlation. The standard deviation is around 1.    
+
+
 
 ### Numerical results
+
 
 
 ### Inferential  (Build model.1)
