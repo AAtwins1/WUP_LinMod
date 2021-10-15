@@ -40,18 +40,40 @@ plot(SIMS~ARM,data=data)
 The plot shows a positive linear correlation. The standard deviation is around 1.    
 
 
-
 ### Numerical results
-
-
+```{r}
+cor(SIMS~ARM,data=data)
+```
+The correlation shown is about .7.
 
 ### Inferential  (Build model.1)
 
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+The equation of the line is SIMS = .054563*ARM-4.095160.
+
+
+
 #### Predict at target point
 
+```{r}
+mydata= data.frame(GRIP=94,ARM=88)
+```
+
+```{r}
+predict(model.1,mydata,interval="confidence")
+```
 
 #### scatterplot with model fit
-  
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+``` 
+
+```{r}
+basicNN + geom_point() + geom_smooth(method=lm)
+``` 
 
 ## Model 2 SIM~GRIP
 
