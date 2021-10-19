@@ -177,4 +177,4 @@ Here model 1 is shown to be better than model 2 as it shows that the error in th
 ```{r}
 anova(model.1,model.2)
 ```
-
+When comparing model 1 and 2 you can not get a statistical assessment. There is no p-value shown as you do when comparing model 1 or 2 to model3 because these are nested models. 
